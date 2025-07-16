@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import BirthdayImage from "./BirthdayCode";
 
 interface Shell {
   x: number;
@@ -60,7 +59,6 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
   const [birthdayMessage, setBirthdayMessage] = useState("");
   const explosionSounds = useRef<HTMLAudioElement[]>([]);
   const [imageDropped, setImageDropped] = useState(false);
-  const [hasDropped, setHasDropped] = useState(false);
 
   // Load sounds once
   useEffect(() => {

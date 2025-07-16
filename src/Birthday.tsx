@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Fireworks from "./components/Fireworks";
 import Balloons from "./components/Balloons";
 import Girl2 from "./assets/images/image2.png";

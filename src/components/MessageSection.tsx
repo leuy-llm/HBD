@@ -1,5 +1,3 @@
-import React from "react";
-
 const Message = () => {
   return (
     <div className="min-h-screen flex items-center py-24 justify-center bg-gradient-to-br from-pink-400 via-purple-500 text-white px-6">

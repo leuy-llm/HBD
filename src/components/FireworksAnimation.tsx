@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const FireworksAnimation = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -52,21 +52,36 @@ const FireworksAnimation = () => {
     }
   }
 
-  const createSubFireworks = (x: number, y: number, count: number, color: string, speedMultiplier: number) => {
-    let created = 0;
-    let radians = (Math.PI * 2) / count;
+  // const createSubFireworks = (x: number, y: number, count: number, color: string, speedMultiplier: number) => {
+  //   let created = 0;
+  //   let radians = (Math.PI * 2) / count;
 
-    while (created < count) {
-      let firework = new Firework(
-        x, y, fireworkRadius,
-        Math.cos(radians * created) * Math.random() * speedMultiplier,
-        Math.sin(radians * created) * Math.random() * speedMultiplier,
-        colors[Math.floor(Math.random() * colors.length)]
-      );
-      subFireworksRef.current.push(firework);
-      created++;
-    }
-  };
+  //   while (created < count) {
+  //     let firework = new Firework(
+  //       x, y, fireworkRadius,
+  //       Math.cos(radians * created) * Math.random() * speedMultiplier,
+  //       Math.sin(radians * created) * Math.random() * speedMultiplier,
+  //       colors[Math.floor(Math.random() * colors.length)]
+  //     );
+  //     subFireworksRef.current.push(firework);
+  //     created++;
+  //   }
+  // };
+  const createSubFireworks = (x: number, y: number, count: number, color: string, speedMultiplier: number) => {
+  let created = 0;
+  let radians = (Math.PI * 2) / count;
+
+  while (created < count) {
+    let firework = new Firework(
+      x, y, fireworkRadius,
+      Math.cos(radians * created) * Math.random() * speedMultiplier,
+      Math.sin(radians * created) * Math.random() * speedMultiplier,
+      color // Use the color parameter here
+    );
+    subFireworksRef.current.push(firework);
+    created++;
+  }
+};
 
   const update = () => {
     const canvas = canvasRef.current; 

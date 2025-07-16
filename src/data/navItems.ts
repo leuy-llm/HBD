@@ -1,5 +1,5 @@
 // src/data/navItems.ts
-import { Gift, Camera, Calendar, Star, Mail } from "lucide-react";
+import { Gift, Camera, Calendar, Mail } from "lucide-react";
 import type { NavItem } from "../types/types";
 
 export const navItems: NavItem[] = [
