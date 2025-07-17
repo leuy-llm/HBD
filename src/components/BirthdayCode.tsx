@@ -158,7 +158,7 @@ const PickupLine: React.FC = () => {
           <button
             onClick={() => {
               setModalStep(null);
-              showToast("See you at home! 🏠", () => navigate("/home"));
+              showToast("Happy Birthday! 🐯", () => navigate("/birthday"));
             }}
             className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition duration-300 shadow"
           >

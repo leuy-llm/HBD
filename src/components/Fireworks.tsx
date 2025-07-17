@@ -63,7 +63,7 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
   // Load sounds once
   useEffect(() => {
     explosionSounds.current = [
-      new Audio("/mixkit-bomb-drop-impact-2804.wav"),
+      // new Audio("/mixkit-bomb-drop-impact-2804.wav"),
       new Audio("/mixkit-multiple-fireworks-explosions-1689.wav"),
     ];
     explosionSounds.current.forEach((sound) => {
@@ -208,13 +208,11 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
       playRandomExplosion();
     };
 
-    // Reset canvas & clear old shells/passes in case
     reset();
     shells.current = [];
     pass.current = [];
     lastRun.current = 0;
 
-    // Add the big firework shell to start the show
     const bigShell: Shell = {
       x: 0.5,
       y: 0.5,
@@ -240,7 +238,6 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
     };
   }, [trigger]);
 
-  // Hide message after 4 seconds every time it's shown
   useEffect(() => {
     if (!birthdayMessage) return;
     const timeout = setTimeout(() => setBirthdayMessage(""), 4000);
@@ -253,10 +250,8 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
     }
   }, [birthdayMessage]);
 
-  // Render canvas + message (only when triggered and message set)
   return (
     <>
-
       <canvas
         ref={canvasRef}
         className={`fixed top-0 left-0 w-full h-full   z-[-1] ${
