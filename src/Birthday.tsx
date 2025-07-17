@@ -169,13 +169,13 @@ function Birthday() {
         {/* Birthday Effects */}
         {fireworkTrigger && (
           <>
-            {showBirthdayImage && (
+            {/* {showBirthdayImage && (
               <img
                 src={Girl2}
                 alt="Happy Birthday"
                 className="fixed top-1/4 left-1/2 rounded-xl transform -translate-x-1/2 z-50 w-1/2 md:w-1/3 h-auto animate-bounce-in"
               />
-            )}
+            )} */}
             <Balloons />
           </>
         )}
