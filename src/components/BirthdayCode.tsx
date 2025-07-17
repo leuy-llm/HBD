@@ -67,7 +67,7 @@ const PickupLine: React.FC = () => {
       {show && modalStep === "main" && (
         <ModalWrapper>
           <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 text-3xl">
-            💘
+           🎈🎀
           </div>
           <h2 className="text-pink-600 text-2xl font-bold mb-4">
             Hey, quick question...
