@@ -1,3 +1,4 @@
+import { ArrowBigDown, ArrowBigLeft, ArrowBigRight } from "lucide-react";
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -52,7 +53,7 @@ const PickupLine: React.FC = () => {
 
   const ModalWrapper = ({ children }: { children: React.ReactNode }) => (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className="animate-bounce-in bg-white rounded-3xl shadow-2xl p-6 max-w-md w-[90%] text-center border border-pink-200 relative">
+      <div className="animate-bounce-in bg-white rounded-xl shadow-2xl p-6 max-w-md w-[90%] text-center border border-pink-200 relative">
         {children}
       </div>
     </div>
@@ -141,11 +142,11 @@ const PickupLine: React.FC = () => {
         <ModalWrapper>
           <video
             ref={videoRef}
-            src="/videos/video_2025-07-16_08-58-09.mp4"
+            src="/videos/video_2025-07-17_18-59-03.mp4"
             controls
             autoPlay
             onEnded={handleVideoEnd}
-            className="rounded-xl w-full h-auto"
+            className="rounded-sm w-full h-auto"
           />
         </ModalWrapper>
       )}
@@ -153,16 +154,16 @@ const PickupLine: React.FC = () => {
       {modalStep === "final" && (
         <ModalWrapper>
           <p className="text-gray-800 text-lg sm:text-xl leading-relaxed mb-6">
-            That was just for you 💖 Hope it made you smile 😊
+          Let me guess, you're gonna say 'Pin mles b' 😏👍
           </p>
           <button
             onClick={() => {
               setModalStep(null);
-              showToast("Happy Birthday! 🐯", () => navigate("/birthday"));
+              showToast("Happy Birthday!", () => navigate("/birthday"));
             }}
             className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full transition duration-300 shadow"
           >
-            Awww 🥺
+            Pin mles b 
           </button>
         </ModalWrapper>
       )}
