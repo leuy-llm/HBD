@@ -99,7 +99,7 @@ const Fireworks: React.FC<FireworksCanvasProps> = ({
     playRandomExplosion();
 
     if (shell.size > 8) {
-      setBirthdayMessage("Happy Birthday Beautiful Girl \n😸");
+      setBirthdayMessage("Happy birthday to you");
     }
   };
 
